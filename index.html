@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+</head>
+<body ng-app="appModule">
+    
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-default navbar-fixed">
+                <div class="col-md-6">
+                    <h5>AngularJS Demo</h5>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav nav-pills">
+                        <li><a href="#!/Home">Home</a></li>
+                        <li><a href="#!/Brands">Brands</a></li>
+                        <li><a href="#!/Departments">Departments</a></li>
+                        <li><a href="#!/Products">Products</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div ui-view="main"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            @copyright
+        </div>
+    </footer>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+
+    <script src="app/appModule.js"></script>
+    
+    <script src="app/Configs/appConfig1.js"></script>
+
+    <script src="app/Services/baseService.js"></script>
+    <script src="app/Services/brandService.js"></script>
+    <script src="app/Services/departmentService.js"></script>
+    <script src="app/Services/productService.js"></script>
+</body>
+</html>

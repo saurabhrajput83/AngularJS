@@ -1,0 +1,43 @@
+﻿<div id="departments_content">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Departments</li>
+        </ol>
+    </nav>
+    <br />
+    <section class="actions right">
+        <a class="btn btn-primary" href="#!/Department_Add">Add New Department</a>
+    </section>
+    <br />
+    <section class="data">
+        <div data-ng-if="hasData('Departments')">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">IsHidden</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="department in Departments">
+                        <td>{{department.Id}}</td>
+                        <td>{{department.Name}}</td>
+                        <td>{{department.Description}}</td>
+                        <td>{{department.IsHidden}}</td>
+                        <td>
+                            <a data-ng-click="Model_Edit('Department', department.Id)">Edit</a> |
+                            <a data-ng-click="Model_Delete('Department', department.Id)">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div data-ng-if="!hasData('Departments')">
+            <p>No data found.</p>
+        </div>
+    </section>
+</div>

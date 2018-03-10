@@ -1,0 +1,43 @@
+﻿<div id="brands_content">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Brands</li>
+        </ol>
+    </nav>
+    <br />
+    <section class="actions right">
+        <a class="btn btn-primary" href="#!/Brand_Add">Add New Brand</a>
+    </section>
+    <br />
+    <section class="data">
+        <div data-ng-if="hasData('Brands')">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">IsHidden</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="brand in Brands">
+                        <td>{{brand.Id}}</td>
+                        <td>{{brand.Name}}</td>
+                        <td>{{brand.Description}}</td>
+                        <td>{{brand.IsHidden}}</td>
+                        <td>
+                            <a data-ng-click="Model_Edit('Brand', brand.Id)">Edit</a> |
+                            <a data-ng-click="Model_Delete('Brand', brand.Id)">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div data-ng-if="!hasData('Brands')">
+            <p>No data found.</p>
+        </div>
+    </section>
+</div>
