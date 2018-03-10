@@ -17,20 +17,18 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">IsHidden</th>
+                        <th scope="col">Address</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr data-ng-repeat="brand in Brands">
-                        <td>{{brand.Id}}</td>
+                        <td>{{brand.ID}}</td>
                         <td>{{brand.Name}}</td>
-                        <td>{{brand.Description}}</td>
-                        <td>{{brand.IsHidden}}</td>
+                        <td>{{brand.Address.Street}}, {{brand.Address.City}}, {{brand.Address.State}}, {{brand.Address.Country}} ({{brand.Address.ZipCode}})</td>
                         <td>
-                            <a data-ng-click="Model_Edit('Brand', brand.Id)">Edit</a> |
-                            <a data-ng-click="Model_Delete('Brand', brand.Id)">Delete</a>
+                            <a href="#!/Brand_Edit/{{brand.ID}}">Edit</a> |
+                            <a data-ng-click="brand_Delete(brand.Id)">Delete</a>
                         </td>
                     </tr>
                 </tbody>

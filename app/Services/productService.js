@@ -21,18 +21,18 @@ appModule.service('productService', ['baseService', function (baseService) {
         return baseService.sendRequest(request);
     };
 
-    this.GetAllProducts = function () {
+    this.getAllProducts = function () {
         var request = {
             method: "GET",
-            url: "DemoApi/GetAllProducts"
+            url: "Products"
         };
         return baseService.sendRequest(request);
     };
 
-    this.GetProductById = function (productId) {
+    this.getProductById = function (productId) {
         var request = {
             method: "GET",
-            url: "DemoApi/GetProductById/" + productId
+            url: "Products(" + productId + ")"
         };
         return baseService.sendRequest(request);
     };

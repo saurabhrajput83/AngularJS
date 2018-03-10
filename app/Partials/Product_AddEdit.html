@@ -1,4 +1,4 @@
-﻿<div id="product_AddEdit" class="container">
+﻿<div id="product_AddEdit_content">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -18,8 +18,8 @@
                     <input type="text" id="Name" name="Name" data-ng-model="Product.Name" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="ModelNumber">Model Number</label>
-                    <input type="text" id="ModelNumber" name="ModelNumber" data-ng-model="Product.ModelNumber" class="form-control" />
+                    <label for="ModelNumber">Rating</label>
+                    <input type="text" id="ModelNumber" name="ModelNumber" data-ng-model="Product.Rating" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label for="Description">Description</label>
@@ -32,15 +32,6 @@
                 <div class="form-group">
                     <label for="BrandId">Brand Id</label>
                     <select id="BrandId" name="BrandId" data-ng-model="Product.BrandId" class="form-control"></select>
-                </div>
-                <div class="form-group">
-                    <label for="DepartmentId">Department Id</label>
-                    <select id="DepartmentId" name="DepartmentId" data-ng-model="Product.DepartmentId" class="form-control"
-                            data-ng-options=""></select>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" id="IsHidden" name="IsHidden" data-ng-model="Product.IsHidden" />
-                    <label for="IsHidden">Is Hidden</label>
                 </div>
                 <input type="button" class="btn btn-primary" value="Save" data-ng-click="Product_CreateUpdate()" />
                 <input type="reset" class="btn btn-primary" value="Reset" />

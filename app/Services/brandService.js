@@ -4,7 +4,7 @@
  */
 appModule.service('brandService', ['baseService', function (baseService) {
 
-    this.CreateUpdateBrand = function (brand) {
+    this.createUpdateBrand = function (brand) {
         var request = {
             data: brand,
             method: "POST",
@@ -13,7 +13,7 @@ appModule.service('brandService', ['baseService', function (baseService) {
         return baseService.sendRequest(request);
     };
 
-    this.DeleteBrand = function (brandId) {
+    this.deleteBrand = function (brandId) {
         var request = {
             method: "POST",
             url: "DemoApi/DeleteBrand/" + brandId
@@ -21,18 +21,18 @@ appModule.service('brandService', ['baseService', function (baseService) {
         return baseService.sendRequest(request);
     };
 
-    this.GetAllBrands = function () {
+    this.getAllBrands = function () {
         var request = {
             method: "GET",
-            url: "DemoApi/GetAllBrands"
+            url: "Suppliers"
         };
         return baseService.sendRequest(request);
     };
 
-    this.GetBrandById = function (brandId) {
+    this.getBrandById = function (brandId) {
         var request = {
             method: "GET",
-            url: "DemoApi/GetBrandById/" + brandId
+            url: "Suppliers(" + brandId + ")"
         };
         return baseService.sendRequest(request);
     };

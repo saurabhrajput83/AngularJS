@@ -12,8 +12,18 @@ appModule.config(["$stateProvider", "$urlRouterProvider",function($stateProvider
         data:'',
         views:{
             'main': {
-                templateUrl:'app/Partials/Home.html'
-                //controller: 'homeController'
+                templateUrl:'app/Partials/Home.html',
+                controller: 'homeController'
+            }
+        }
+    })
+    .state('Brand_Edit',{
+        url:'/Brand_Edit/:id',
+        data:'',
+        views:{
+            'main': {
+                templateUrl:'app/Partials/Brand_AddEdit.html',
+                controller: 'brandController'
             }
         }
     })
@@ -22,8 +32,8 @@ appModule.config(["$stateProvider", "$urlRouterProvider",function($stateProvider
         data:'',
         views:{
             'main': {
-                templateUrl:'app/Partials/Brands.html'
-                //controller: 'productController'
+                templateUrl:'app/Partials/Brands.html',
+                controller: 'brandController'
             }
         }
     })
@@ -37,13 +47,23 @@ appModule.config(["$stateProvider", "$urlRouterProvider",function($stateProvider
             }
         }
     })
+    .state('Product_Edit',{
+        url:'/Product_Edit/:id',
+        data:'',
+        views:{
+            'main': {
+                templateUrl:'app/Partials/Product_AddEdit.html',
+                controller: 'productController'
+            }
+        }
+    })
     .state('Products',{
         url:'/Products',
         data:'',
         views:{
             'main': {
-                templateUrl:'app/Partials/Products.html'
-                //controller: 'productController'
+                templateUrl:'app/Partials/Products.html',
+                controller: 'productController'
             }
         }
     });

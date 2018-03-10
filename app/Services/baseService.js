@@ -8,7 +8,7 @@ appModule.service('baseService', ['$q', '$http', function ($q, $http) {
 
         var deferred = $q.defer();
 
-        var baseUrl = 'http://localhost/MVC_Demo/api';
+        var baseUrl = 'http://services.odata.org/V3/(S(nl1y5a20t4nvntr0v4llwdxy))/OData/OData.svc/';
         var url = baseUrl + '/' + req.url;
 
         var request = {

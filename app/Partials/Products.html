@@ -17,24 +17,24 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Name</th>
-                        <th scope="col">ModelNumber</th>
+                        <th scope="col">Rating</th>
                         <th scope="col">Description</th>
                         <th scope="col">Price</th>
-                        <th scope="col">IsHidden</th>
+                        <th scope="col">Release Date</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr data-ng-repeat="product in Products">
-                        <td>{{product.Id}}</td>
+                        <td>{{product.ID}}</td>
                         <td>{{product.Name}}</td>
-                        <td>{{product.ModelNumber}}</td>
+                        <td>{{product.Rating}}</td>
                         <td>{{product.Description}}</td>
                         <td>{{product.Price}}</td>
-                        <td>{{product.IsHidden}}</td>
+                        <td>{{product.ReleaseDate | date}}</td>
                         <td>
-                            <a data-ng-click="Model_Edit('Product', product.Id)">Edit</a> |
-                            <a data-ng-click="Model_Delete('Product', product.Id)">Delete</a>
+                            <a href="#!/Product_Edit/{{product.ID}}">Edit</a> |
+                            <a data-ng-click="product_Delete(product.ID)">Delete</a>
                         </td>
                     </tr>
                 </tbody>
