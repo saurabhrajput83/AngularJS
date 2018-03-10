@@ -4,7 +4,7 @@
  */
 appModule.service('departmentService', ['baseService', function (baseService) {
 
-    this.CreateUpdateDepartment = function (department) {
+    this.createUpdateDepartment = function (department) {
         var request = {
             data: department,
             method: "POST",
@@ -13,7 +13,7 @@ appModule.service('departmentService', ['baseService', function (baseService) {
         return baseService.sendRequest(request);
     };
 
-    this.DeleteDepartment = function (departmentId) {
+    this.deleteDepartment = function (departmentId) {
         var request = {
             method: "POST",
             url: "DemoApi/DeleteDepartment/" + departmentId
@@ -21,18 +21,18 @@ appModule.service('departmentService', ['baseService', function (baseService) {
         return baseService.sendRequest(request);
     };
 
-    this.GetAllDepartments = function () {
+    this.getAllDepartments = function () {
         var request = {
             method: "GET",
-            url: "DemoApi/GetAllDepartments"
+            url: "Categories"
         };
         return baseService.sendRequest(request);
     };
 
-    this.GetDepartmentById = function (departmentId) {
+    this.getDepartmentById = function (departmentId) {
         var request = {
             method: "GET",
-            url: "DemoApi/GetDepartmentById/" + departmentId
+            url: "Categories(" + departmentId + ")"
         };
         return baseService.sendRequest(request);
     };

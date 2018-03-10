@@ -17,6 +17,16 @@ appModule.config(["$stateProvider", "$urlRouterProvider",function($stateProvider
             }
         }
     })
+    .state('Brand_Add',{
+        url:'/Brand_Add',
+        data:'',
+        views:{
+            'main': {
+                templateUrl:'app/Partials/Brand_AddEdit.html',
+                controller: 'brandController'
+            }
+        }
+    })
     .state('Brand_Edit',{
         url:'/Brand_Edit/:id',
         data:'',
@@ -37,13 +47,43 @@ appModule.config(["$stateProvider", "$urlRouterProvider",function($stateProvider
             }
         }
     })
+    .state('Department_Add',{
+        url:'/Department_Add',
+        data:'',
+        views:{
+            'main': {
+                templateUrl:'app/Partials/Department_AddEdit.html',
+                controller: 'departmentController'
+            }
+        }
+    })
+    .state('Department_Edit',{
+        url:'/Department_Edit/:id',
+        data:'',
+        views:{
+            'main': {
+                templateUrl:'app/Partials/Department_AddEdit.html',
+                controller: 'departmentController'
+            }
+        }
+    })
     .state('Departments',{
         url:'/Departments',
         data:'',
         views:{
             'main': {
-                templateUrl:'app/Partials/Departments.html'
-                //controller: 'productController'
+                templateUrl:'app/Partials/Departments.html',
+                controller: 'departmentController'
+            }
+        }
+    })
+    .state('Product_Add',{
+        url:'/Product_Add',
+        data:'',
+        views:{
+            'main': {
+                templateUrl:'app/Partials/Product_AddEdit.html',
+                controller: 'productController'
             }
         }
     })

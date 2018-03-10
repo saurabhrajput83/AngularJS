@@ -8,7 +8,7 @@
         <div class="col-md-4">
             <ul class="list-group">
                 <li class="list-group-item"><h5>Brands</h5></li>
-                <li class="list-group-item" data-ng-repeat="brand in Brands">{{brand.Name}}</li>
+                <li class="list-group-item" data-ng-repeat="brand in Brands | limitTo:2">{{brand.Name}}</li>
                 <li class="list-group-item">
                     <a href="#!/Brand_Add">Create Brand</a> | <a href="#!/Brands">View All</a>
                 </li>
@@ -17,7 +17,7 @@
         <div class="col-md-4">
             <ul class="list-group">
                 <li class="list-group-item"><h5>Departments</h5></li>
-                <li class="list-group-item" data-ng-repeat="department in Departments">{{department.Name}}</li>
+                <li class="list-group-item" data-ng-repeat="department in Departments | limitTo:2">{{department.Name}}</li>
                 <li class="list-group-item">
                     <a href="#!/Department_Add">Create Department</a> | <a href="#!/Departments">View All</a>
                 </li>
@@ -26,7 +26,7 @@
         <div class="col-md-4">
             <ul class="list-group">
                 <li class="list-group-item"><h5>Products</h5></li>
-                <li class="list-group-item" data-ng-repeat="product in Products">{{product.Name}}</li>
+                <li class="list-group-item" data-ng-repeat="product in Products | limitTo:2">{{product.Name}}</li>
                 <li class="list-group-item">
                     <a href="#!/Product_Add">Create Product</a> | <a href="#!/Products">View All</a>
                 </li>

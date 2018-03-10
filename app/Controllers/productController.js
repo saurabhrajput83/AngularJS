@@ -1,6 +1,6 @@
 
-appModule.controller('productController', ['$scope', '$state', '$location', 'brandService', 'productService', 
-function($scope, $state, $location, brandService, productService){
+appModule.controller('productController', ['$scope', '$rootScope', '$state', '$location', 'brandService', 'productService', 
+function($scope, $rootScope, $state, $location, brandService, productService){
     
     console.log("productController");
     

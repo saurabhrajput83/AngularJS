@@ -17,19 +17,15 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">IsHidden</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr data-ng-repeat="department in Departments">
-                        <td>{{department.Id}}</td>
+                        <td>{{department.ID}}</td>
                         <td>{{department.Name}}</td>
-                        <td>{{department.Description}}</td>
-                        <td>{{department.IsHidden}}</td>
                         <td>
-                            <a data-ng-click="Model_Edit('Department', department.Id)">Edit</a> |
+                            <a href="#!/Department_Edit/{{department.ID}}">Edit</a> |
                             <a data-ng-click="Model_Delete('Department', department.Id)">Delete</a>
                         </td>
                     </tr>
