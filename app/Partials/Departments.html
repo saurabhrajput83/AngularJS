@@ -12,7 +12,9 @@
     <br />
     <section class="data">
         <div data-ng-if="hasData('Departments')">
-            <table class="table table-striped">
+            <div custom-table="" key="Departments" cols='[{"title": "ID", "binding": "ID"}, {"title": "Name", "binding": "Name"}]'>
+            </div>
+            <!-- <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
@@ -30,7 +32,7 @@
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </table> -->
         </div>
         <div data-ng-if="!hasData('Departments')">
             <p>No data found.</p>

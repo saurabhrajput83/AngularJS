@@ -1,0 +1,12 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th data-ng-repeat="col in columns" scope="col">{{col.title}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="row in rows">
+            <td data-ng-repeat="col in columns">{{row[col.binding]}}</td>
+        </tr>
+    </tbody>
+</table>

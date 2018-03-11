@@ -1,2 +1,2 @@
 
-var appModule = angular.module("appModule", ["ui.router", "ngRoute"]);
+var appModule = angular.module("appModule", ["ngRoute", "ngSanitize", "ui.router"]);
